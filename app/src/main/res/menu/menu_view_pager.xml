@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="org.horaapps.leafpic.activities.SingleMediaActivity">
+    tools:context="gallery.photo.hdgallerypro.litegallery.activities.SingleMediaActivity">
     <group android:id="@+id/only_photos_options">
         <item
             android:id="@+id/action_edit"

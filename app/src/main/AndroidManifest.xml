@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.horaapps.leafpic"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="gallery.photo.hdgallerypro.litegallery"
     android:installLocation="auto">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
-    <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
@@ -19,18 +19,26 @@
         android:required="false" />
 
     <application
-        android:name=".App"
+        android:name="gallery.photo.hdgallerypro.litegallery.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:theme="@style/Theme.AppCompat">
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory"
+        android:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id"/>
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
         <activity
-            android:name=".activities.PlayerActivity"
+            android:name="gallery.photo.hdgallerypro.litegallery.activities.PlayerActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/video_player"
+            android:label="Quick Video Player"
             android:launchMode="singleTask"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/AppThemeNoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -45,10 +53,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SplashScreen"
+            android:name="gallery.photo.hdgallerypro.litegallery.activities.SplashScreen"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/AppThemeNoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -68,17 +76,16 @@
                 <action android:name="android.intent.action.PICK" />
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="image/*" />
-                <data android:mimeType="video/*" />
+                <data android:mimeType="*/*" />
             </intent-filter>
             <intent-filter>
-                <action android:name="com.horaapps.leafpic.OPEN_ALBUM" />
+                <action android:name="gallery.photo.hdgallerypro.litegallery.OPEN_ALBUM" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.MainActivity"
+            android:name="gallery.photo.hdgallerypro.litegallery.activities.MainActivity"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/AppThemeNoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.albumsAct" />
 
@@ -86,14 +93,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SingleMediaActivity"
+            android:name="gallery.photo.hdgallerypro.litegallery.activities.SingleMediaActivity"
             android:configChanges="orientation|screenSize|uiMode|screenLayout|navigation"
             android:label="@string/app_name"
-            android:parentActivityName=".activities.MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:parentActivityName="gallery.photo.hdgallerypro.litegallery.activities.MainActivity"
+            android:theme="@style/AppThemeNoActionbar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="org.horaapps.leafpic.activities.MainActivity" />
+                android:value="gallery.photo.hdgallerypro.litegallery.activities.MainActivity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.albumPhoto" />
@@ -117,10 +124,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name="gallery.photo.hdgallerypro.litegallery.activities.SettingsActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/settings"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/AppThemeNoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.SETTING" />
 
@@ -133,10 +139,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".about.AboutActivity"
+            android:name="gallery.photo.hdgallerypro.litegallery.about.AboutActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/about"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/AppThemeNoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.ABOUT" />
 
@@ -144,10 +149,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.SecurityActivity"
+            android:name="gallery.photo.hdgallerypro.litegallery.activities.SecurityActivity"
             android:configChanges="orientation|screenSize"
-            android:label="@string/security"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:theme="@style/AppThemeNoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.SECURITY" />
 
@@ -155,19 +159,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.DonateActivity"
-            android:label="@string/donate"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.DONATE" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activities.BlackWhiteListActivity"
-            android:label="@string/chose_folders"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:name="gallery.photo.hdgallerypro.litegallery.activities.BlackWhiteListActivity"
+            android:theme="@style/AppThemeNoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.ExcludedAlbums" />
 
@@ -175,9 +168,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.PaletteActivity"
-            android:label="@string/palette"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:name="gallery.photo.hdgallerypro.litegallery.activities.PaletteActivity"
+            android:theme="@style/AppThemeNoActionbar">
             <intent-filter>
                 <action android:name="android.intent.action.PALETTE" />
 
@@ -194,16 +186,16 @@
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/AppThemeNoActionbar" />
 
         <!--
              <meta-data
-            android:name="org.horaapps.leafpic.CustomGlideModule"
+            android:name="gallery.photo.hdgallerypro.litegallery.CustomGlideModule"
             android:value="GlideModule" />
         -->
 
         <provider
-            android:name=".util.LegacyCompatFileProvider"
+            android:name="gallery.photo.hdgallerypro.litegallery.util.LegacyCompatFileProvider"
             android:authorities="${applicationId}.provider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -213,11 +205,11 @@
         </provider>
 
         <service
-            android:name=".LookForMediaJob"
+            android:name="gallery.photo.hdgallerypro.litegallery.LookForMediaJob"
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <activity android:name=".activities.AffixActivity" />
+        <activity android:name="gallery.photo.hdgallerypro.litegallery.activities.AffixActivity" />
     </application>
 
 </manifest>

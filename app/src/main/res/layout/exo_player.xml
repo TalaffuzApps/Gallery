@@ -18,7 +18,7 @@
 
     </com.google.android.exoplayer2.ui.AspectRatioFrameLayout>
 
-    <org.horaapps.leafpic.views.videoplayer.CustomPlayBackController
+    <gallery.photo.hdgallerypro.litegallery.views.videoplayer.CustomPlayBackController
         android:id="@+id/control"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

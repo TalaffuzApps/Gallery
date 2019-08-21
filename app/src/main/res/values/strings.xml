@@ -1,21 +1,17 @@
 <resources>
     <!--LEAFPIC STRINGS-->
-    <!--<string name="app_name">LeafPic</string>-->
+    <string name="mint_id">98a67c3f</string>
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstitial">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="privacy_text">By clicking <b>Get Started</b>, you agree to our <a href="https://www.apphint.com/gallery/terms-of-use.php">Terms</a> and <a href="https://sites.google.com/view/gallery-app-privacy-policy">Privacy Policy</a></string>
+
     <string name="app_light_description">A colorful material gallery.</string>
-    <string name="team_name">HoraApps</string>
-    <string name="welcome_slide_title">Welcome To LeafPic!</string>
+    <string name="team_name">Talaffuz Apps</string>
+    <string name="welcome_slide_title">Welcome To Gallery!</string>
     <string name="welcome_slide_sub">A Colorful Material Designed Gallery!</string>
     <string name="made_with_love_by">Made with love by</string>
     <string name="Effects">Effects</string>
-
-
-    <!--AUTHORS-->
-    <string name="developer_donald_name" translatable="false">Donald Shtjefni</string>
-    <string name="developer_gilbert_name" translatable="false">Gilbert Ndresaj</string>
-    <string name="developer_calvin_name" translatable="false">Calvin Noronha</string>
-    <string name="donald_role">Project Manager</string>
-    <string name="gilbert_role">Major Designer</string>
-    <string name="calvin_role">To Be Decided</string>
 
     <!--EASTER EGG-->
     <string name="emoji_easter_egg">¯\\_(ツ)_/¯</string>
@@ -103,7 +99,7 @@
     <string name="unhide_album_message">Unhiding this album will also make the media available for other apps.</string>
 
     <string name="new_folder_message">The new folder will be created in the current path, and the media will then be copied or moved in the new folder.</string>
-    <string name="card_style_alert">NOTE: Restart the app for the changes to take effect.</string>
+    <string name="restart_app">NOTE: Restart the app for the changes to take effect.</string>
     <string name="show_album_path">Show album path</string>
     <string name="show_preview_image_name">Show preview image name</string>
     <string name="show_media_count">Show media count</string>
@@ -190,6 +186,8 @@
     <string name="disable_animations_sub">Disable animations if there are performance issues.</string>
     <string name="enable_timeline_title">Enable Timeline</string>
     <string name="enable_timeline_desc">Enable the Timeline view for media. Experimental.</string>
+    <string name="option_change_language_sub">Change language to English</string>
+    <string name="option_change_language">Language</string>
 
     <string name="media_viewer">Media Viewer</string>
     <string name="media_viewer_theme">Media Viewer Theme</string>
@@ -235,18 +233,6 @@
     <string name="custom_icon_color">Custom Icon Color</string>
     <string name="custom_icon_color_sub">Apply accent color on icons.</string>
 
-    <!--DONATE STRINGS-->
-    <string name="donate_googleplay">Google Play Store</string>
-    <string name="donate_payppal">PayPal</string>
-    <string name="donate_bitcoin">Bitcoin</string>
-    <string name="donate_header_text">
-        Hi,\nWe are a small independent team that works with love on LeafPic ❤.
-        This is our first app, so we have a lot to learn by your feedback.
-        If you enjoy our work you can show us your appreciation by donating.
-        \nWith your help we can make this project even better or start new cool ones.
-    </string>
-    <string name="donate_sub_text">Consider donating us something to support development.</string>
-
     <string name="thank_you">Thank you!</string>
     <string name="address_copied">Address copied to clipboard</string>
     <string name="coming_soon">Coming Soon!</string>
@@ -258,10 +244,10 @@
     <string name="about_version">Version</string>
 
     <string name="about_license">License</string>
-    <string name="about_license_sub">Check GPLv3 license terms used on LeafPic.</string>
+    <string name="about_license_sub">Check GPLv3 license terms used on Gallery.</string>
 
     <string name="about_library_license">Library Licenses</string>
-    <string name="about_library_license_sub">Check third-party libs used on LeafPic.</string>
+    <string name="about_library_license_sub">Check third-party libs used on Gallery.</string>
 
     <string name="about_authors">Authors</string>
     <string name="about_author_donald_description">
@@ -297,13 +283,12 @@
 
     <string name="about_support">Support Development</string>
     <string name="about_support_translate">Translate</string>
-    <string name="about_support_translate_sub">Help us translate LeafPic in more languages.</string>
 
     <string name="about_support_report_bug">Report bug</string>
     <string name="about_support_report_bug_sub">Report bug or request new features.</string>
 
     <string name="about_support_rate">Rate</string>
-    <string name="about_support_rate_sub">Leave us a positive rating if you like LeafPic.</string>
+    <string name="about_support_rate_sub">Leave us a positive rating if you like Gallery.</string>
 
     <string name="about_support_github">GitHub</string>
     <string name="about_support_github_sub">Fork the repo and push changes or submit new issues.</string>
@@ -335,6 +320,7 @@
     <string name="text">Text</string>
     <string name="retry">Retry</string>
     <string name="off">Off</string>
+    <string name="loop_video">Loop video</string>
 
     <!--ERRORS-->
     <string name="error_drm_not_supported">Protected content is supported on Android 4.3 and later</string>
@@ -414,5 +400,8 @@
     <string name="timeline_grouping_menu_week">Week</string>
     <string name="timeline_grouping_menu_month">Month</string>
     <string name="timeline_grouping_menu_year">Year</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

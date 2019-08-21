@@ -1,17 +1,15 @@
-v0.7
+v1.0.0
 ====
 
 ### Features
-* Color Palette
-* FingerPrint unlock #396 #235
-* Affix
-* Slide Show #266
-* Show all Images Feature #416
-* Print
-* Delete/Move/Copy/Rename with progress dialog, and cancel feature #386
+* UI Enhancement
+* New Logo Brand Design
+* AdMob Support Integrated
+* Splunk Mint Integrated to track crash logs
+* OneSignal Notification integration - so that we can notify for new releases
+* Removed Donation Pages from app
 
 ### Fixes
 
-* Fixed crashes resuming from recents #475 #398
-* Fixed crashes KitKAT #418 #410
-* Improved opening from other apps #417 #403
+* Fixed Gallery Pick feature
+* Stability Improvements

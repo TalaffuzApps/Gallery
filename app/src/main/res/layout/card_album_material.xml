@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <org.horaapps.leafpic.views.SquareRelativeLayout
+            <gallery.photo.hdgallerypro.litegallery.views.SquareRelativeLayout
                 android:id="@+id/header_album_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -37,13 +37,13 @@
                     app:iiv_icon="gmd-check"
                     tools:targetApi="lollipop" />
 
-                <org.horaapps.leafpic.views.SquareImageView
+                <gallery.photo.hdgallerypro.litegallery.views.SquareImageView
                     android:id="@+id/album_preview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop" />
 
-            </org.horaapps.leafpic.views.SquareRelativeLayout>
+            </gallery.photo.hdgallerypro.litegallery.views.SquareRelativeLayout>
 
             <View
                 android:id="@+id/album_card_divider"
@@ -115,4 +115,4 @@
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

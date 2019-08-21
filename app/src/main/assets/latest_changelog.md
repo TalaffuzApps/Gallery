@@ -1,7 +1,15 @@
-v0.6-beta-1 
-==================
-- Fixed crash on startup and some random crash
-- Fixed crash opening video (Nougat)
-- fixed zoom out issue with SubScaling ImageView enabled
-- Updated translations
-- General improvements
+v1.0.0
+====
+
+Features
+- UI Enhancement
+- New Logo Brand Design
+- AdMob Support Integrated
+- Splunk Mint Integrated to track crash logs
+- OneSignal Notification integration - so that we can notify for new releases
+- Removed Donation Pages from app
+
+Fixes
+
+- Fixed Gallery Pick feature
+- Stability Improvements

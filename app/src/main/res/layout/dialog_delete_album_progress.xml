@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView android:layout_width="match_parent"
+<androidx.cardview.widget.CardView android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="2dp"
@@ -32,7 +32,7 @@
                 android:paddingStart="@dimen/medium_spacing"
                 android:paddingEnd="@dimen/medium_spacing">
 
-                <android.support.v7.widget.RecyclerView
+                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_folders"
                     android:clipToPadding="false"
                     android:paddingTop="@dimen/medium_spacing"
@@ -63,4 +63,4 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>
