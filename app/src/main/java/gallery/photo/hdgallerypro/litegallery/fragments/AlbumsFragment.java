@@ -180,9 +180,9 @@ public class AlbumsFragment extends BaseMediaGridFragment {
         ButterKnife.bind(this, v);
 
         int spanCount = columnsCount();
-        spacingDecoration = new GridSpacingItemDecoration(spanCount, Measure.pxToDp(3, getContext()), true);
+        spacingDecoration = new GridSpacingItemDecoration(spanCount, Measure.pxToDp(2, getContext()), true);
         rv.setHasFixedSize(true);
-        //rv.addItemDecoration(spacingDecoration);
+        rv.addItemDecoration(spacingDecoration);
         rv.setLayoutManager(new GridLayoutManager(getContext(), spanCount));
         if(Prefs.animationsEnabled()) {
             rv.setItemAnimator(

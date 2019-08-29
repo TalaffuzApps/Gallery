@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
+
+import android.os.Bundle;
+import android.os.Parcelable;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.ViewGroup;
 
@@ -29,10 +33,35 @@ public class MediaPagerAdapter extends FragmentStatePagerAdapter {
         super(fm);
         this.media = media;
     }
-
+    /*@Override
+    public Parcelable saveState() {
+        Bundle bundle = (Bundle) super.saveState();
+        Log.e("BUNDLE ",bundle.toString());
+        bundle.putParcelableArray("states", null); // Never maintain any states from the base class, just null it out
+        return bundle;
+    }*/
+    @Override
+    public Parcelable saveState()
+    {
+        Bundle bundle = (Bundle) super.saveState();
+        if (bundle != null)
+        {
+            // Never maintain any states from the base class, just null it out
+            bundle.putParcelableArray("states", null);
+        } else
+        {
+            // do nothing
+        }
+        return bundle;
+    }
     @Override
     public Fragment getItem(int pos) {
+        //Log.e("MEDIA POS:",pos+"");
         Media media = this.media.get(pos);
+        //Log.e("MEDIA ",media.getMimeType());
+        //Log.e("MEDIA ",media.getUri()+"");
+        //Log.e("MEDIA ",media.getPath());
+        //Log.e("MEDIA ",media.getName());
         if (media.isVideo()) return VideoFragment.newInstance(media);
         if (media.isGif()) return GifFragment.newInstance(media);
         else return ImageFragment.newInstance(media);

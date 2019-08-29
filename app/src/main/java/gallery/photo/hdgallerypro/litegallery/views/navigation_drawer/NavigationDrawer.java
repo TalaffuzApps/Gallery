@@ -143,7 +143,7 @@ public class NavigationDrawer extends ScrollView implements Themed {
         ButterKnife.bind(this);
 
         navigationEntries = new NavigationEntry[]
-                {albumsEntry, mediaEntry, hiddenFoldersEntry, wallpapersEntry,
+                {albumsEntry, mediaEntry, hiddenFoldersEntry,
                         settingsEntry, affixEntry, aboutEntry, timelineEntry};
         setupListeners();
 

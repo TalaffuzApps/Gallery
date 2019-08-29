@@ -13,10 +13,10 @@
         android:layout_gravity="center_horizontal"
         android:clipToPadding="false"
         app:fastScrollEnabled="true"
-        app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
-        app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
-        app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
-        app:fastScrollVerticalTrackDrawable="@drawable/line_drawable"
+        app:fastScrollHorizontalThumbDrawable="@drawable/scroll_line_none"
+        app:fastScrollHorizontalTrackDrawable="@drawable/scroll_line_none"
+        app:fastScrollVerticalThumbDrawable="@drawable/scroll_line_none"
+        app:fastScrollVerticalTrackDrawable="@drawable/scroll_line_none"
         android:background="@color/black"/>
 
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

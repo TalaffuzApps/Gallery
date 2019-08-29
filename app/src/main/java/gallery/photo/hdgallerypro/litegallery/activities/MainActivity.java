@@ -118,11 +118,11 @@ public class MainActivity extends SharedMediaActivity implements
         setContentView(R.layout.activity_main);
         unbinder = ButterKnife.bind(this);
         if(Prefs.isFirstTime()){
-            Log.e("XXX","FIRST TIME");
+            //Log.e("XXX","FIRST TIME");
             setBaseTheme(AMOLED);
             Prefs.setFirstTime(false);
         }else{
-            Log.e("XXX","NOT FIRST TIME");
+           // Log.e("XXX","NOT FIRST TIME");
         }
         initUi();
 
@@ -307,9 +307,16 @@ public class MainActivity extends SharedMediaActivity implements
         Intent intent = new Intent(getApplicationContext(), SingleMediaActivity.class);
         intent.putExtra(SingleMediaActivity.EXTRA_ARGS_ALBUM, album);
         try {
-            intent.setAction(SingleMediaActivity.ACTION_OPEN_ALBUM);
-            intent.putExtra(SingleMediaActivity.EXTRA_ARGS_MEDIA, media);
-            intent.putExtra(SingleMediaActivity.EXTRA_ARGS_POSITION, position);
+            ///If number of media is less than 1000, then go for instant preview.
+            if(media.size()<1000) {
+                intent.setAction(SingleMediaActivity.ACTION_OPEN_ALBUM);
+                intent.putExtra(SingleMediaActivity.EXTRA_ARGS_MEDIA, media);
+                intent.putExtra(SingleMediaActivity.EXTRA_ARGS_POSITION, position);
+            }else{
+                //Lazy Load otherwise
+                intent.setAction(SingleMediaActivity.ACTION_OPEN_ALBUM_LAZY);
+                intent.putExtra(SingleMediaActivity.EXTRA_ARGS_MEDIA, media.get(position));
+            }
             startActivity(intent);
         } catch (Exception e) { // Putting too much data into the Bundle
             // TODO: Find a better way to pass data between the activities - possibly a key to
@@ -455,7 +462,9 @@ public class MainActivity extends SharedMediaActivity implements
         mainLayout.setBackgroundColor(getBackgroundColor());
 
 //        setScrollViewColor(navigationDrawerView);
-        setAllScrollbarsColor();
+
+        //rv comment
+        // setAllScrollbarsColor();
 
         navigationDrawerView.setTheme(getPrimaryColor(), getBackgroundColor(), getTextColor(), getIconColor());
 

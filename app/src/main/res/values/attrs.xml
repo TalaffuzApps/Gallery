@@ -38,5 +38,4 @@
         <attr name="linkTitle" format="string" />
         <attr name="linkDescription" format="string" />
     </declare-styleable>
-
 </resources>

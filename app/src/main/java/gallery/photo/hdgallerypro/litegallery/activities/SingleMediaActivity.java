@@ -14,6 +14,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Parcelable;
+import android.os.PersistableBundle;
 import android.provider.Settings;
 import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
@@ -164,6 +165,8 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
             mViewPager.setLocked(savedInstanceState.getBoolean(ISLOCKED_ARG, false));
         }
 
+       // Log.e("MEDIA COUNT:",media.size()+"");
+
         adapter = new MediaPagerAdapter(getSupportFragmentManager(), media);
         initUi();
 
@@ -180,6 +183,13 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
         });
         mAdView.loadAd(adRequest);
         ////////////////////////////////////////////
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Log.e("HIDE SYSTEM UI","SingleMedia");
+                hideSystemUI();
+            }
+        },100);
     }
 
     private void loadAlbum(Intent intent) {
@@ -271,11 +281,13 @@ public class SingleMediaActivity extends SharedMediaActivity implements BaseMedi
 
         setupSystemUI();
 
+
         getWindow().getDecorView().setOnSystemUiVisibilityChangeListener
                 (visibility -> {
                     if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) showSystemUI();
                     else hideSystemUI();
                 });
+
 
         updatePageTitle(position);
 

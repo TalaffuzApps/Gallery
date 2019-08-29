@@ -1,3 +1,8 @@
+v1.0.2
+====
+- Performance Improvement to support thousands of photos on Android 9.
+- UI Enhancements
+
 v1.0.0
 ====
 

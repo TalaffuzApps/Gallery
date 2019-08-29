@@ -122,6 +122,8 @@ public class RvMediaFragment extends BaseMediaGridFragment {
     }
 
     private void reload() {
+        Log.e("LOAD ALBUM:",album.getName()+" "+album.getCount());
+
         loadAlbum(album);
     }
 
@@ -166,9 +168,9 @@ public class RvMediaFragment extends BaseMediaGridFragment {
         ButterKnife.bind(this, v);
 
         int spanCount = columnsCount();
-        spacingDecoration = new GridSpacingItemDecoration(spanCount, Measure.pxToDp(3, getContext()), true);
+        spacingDecoration = new GridSpacingItemDecoration(spanCount, Measure.pxToDp(2, getContext()), true);
         rv.setHasFixedSize(true);
-        //rv.addItemDecoration(spacingDecoration);
+        rv.addItemDecoration(spacingDecoration);
         rv.setLayoutManager(new GridLayoutManager(getContext(), spanCount));
         rv.setItemAnimator(
                 AnimationUtils.getItemAnimator(
